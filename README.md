@@ -1,4 +1,8 @@
+
 # Laravel Code Abstraction
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sweetwood-eu/laravel-code-abstraction.svg?style=flat-square)](https://packagist.org/packages/sweetwood-eu/laravel-code-abstraction)
+[![Build Status](https://img.shields.io/travis/sweetwood-eu/laravel-code-abstraction)](https://travis-ci.org/sweetwood-eu/laravel-code-abstraction)
+
 A simple package with some generators, to not get lost in your own code.
 
 
