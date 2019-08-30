@@ -7,7 +7,7 @@ namespace SweetwoodEU\Laravel\CodeAbstraction\Tests\Unit\Console\Command;
 use SweetwoodEU\Laravel\CodeAbstraction\Providers\ServiceProvider;
 use SweetwoodEU\Laravel\CodeAbstraction\Tests\TestCase;
 
-class ActionMakeTest extends TestCase
+class QueryMakeTest extends TestCase
 {
     protected function getPackageProviders($app)
     {
@@ -16,12 +16,10 @@ class ActionMakeTest extends TestCase
         ];
     }
 
-
     /** @test */
-    public function it_creates_a_action_file()
+    public function it_creates_a_query_file()
     {
-        $this->artisan('make:action Test')
+        $this->artisan('make:query Test')
             ->assertExitCode(0);
     }
-
 }
