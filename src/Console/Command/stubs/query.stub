@@ -1,0 +1,14 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Query\Builder;
+use SweetwoodEU\Laravel\CodeAbstraction\Abstractions\Query;
+
+class DummyClass extends Query
+{
+    protected function query(): Builder
+    {
+        // write your query here...
+    }
+}

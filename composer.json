@@ -1,0 +1,43 @@
+{
+  "name": "sweetwood-eu/laravel-code-abstraction",
+  "description": "A package boilerplate for Laravel",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Paul Olthof",
+      "email": "hi@olthof.tech"
+    }
+  ],
+
+
+  "require": {
+    "laravel/framework": "^5.8"
+  },
+
+  "require-dev": {
+    "orchestra/testbench": "^3.8"
+  },
+
+  "autoload": {
+    "files": [
+      "src/Helpers/functions.php"
+    ],
+    "psr-4": {
+      "SweetwoodEU\\Laravel\\CodeAbstraction\\": "src/"
+    }
+  },
+
+  "autoload-dev": {
+    "psr-4": {
+      "SweetwoodEU\\Laravel\\CodeAbstraction\\Tests\\": "tests/"
+    }
+  },
+
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SweetwoodEU\\Laravel\\CodeAbstraction\\Providers\\ServiceProvider"
+      ]
+    }
+  }
+}

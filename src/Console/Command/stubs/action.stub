@@ -1,0 +1,22 @@
+<?php
+
+namespace DummyNamespace;
+
+use SweetwoodEU\Laravel\CodeAbstraction\Abstractions\Action;
+
+class DummyClass extends Action
+{
+    /**
+     * Action Method
+     *
+     * @return mixed Method should return a result. This result will be available
+     *               with the result() method.
+     *
+     * @throws \Exception When the method throws an exception the run() or __invoke()
+     *                    method will return false.
+     */
+    protected function action()
+    {
+        // $payload = $this->payload();
+    }
+}
