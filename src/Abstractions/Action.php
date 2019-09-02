@@ -36,6 +36,13 @@ abstract class Action
         }, $this->exception);
     }
 
+    public function handle()
+    {
+        if (!$this->run()) {
+            $this->resultOrThrow();
+        }
+    }
+
     protected function payload()
     {
         return $this->payload;
