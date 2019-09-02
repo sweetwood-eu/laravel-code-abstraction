@@ -64,5 +64,20 @@ class ActionTest extends TestCase
         $actionClass->resultOrThrow();
     }
 
+    /** @test */
+    public function action_can_be_dispatched()
+    {
+        $actionClass = new class extends Action {
+            public function action()
+            {
+                return $this->payload();
+            }
+        };
+        $className = get_class($actionClass);
+
+        $this->expectsJobs($className);
+
+        dispatch($actionClass->setPayload('Test'));
+    }
 
 }

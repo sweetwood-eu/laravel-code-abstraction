@@ -2,9 +2,10 @@
 
 namespace DummyNamespace;
 
+use Illuminate\Contracts\Queue\ShouldQueue;
 use SweetwoodEU\Laravel\CodeAbstraction\Abstractions\Action;
 
-class DummyClass extends Action
+class DummyClass extends Action // implements ShouldQueue
 {
     /**
      * Action Method
