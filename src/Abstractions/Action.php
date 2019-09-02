@@ -4,6 +4,8 @@
 namespace SweetwoodEU\Laravel\CodeAbstraction\Abstractions;
 
 
+use SweetwoodEU\Laravel\CodeAbstraction\Exceptions\PayloadValidationException;
+
 abstract class Action
 {
     private $payload;
@@ -19,6 +21,11 @@ abstract class Action
 
     public function run($payload = null): bool
     {
+        if (!$this->validatePayload($payload)) {
+            $this->exception = (new PayloadValidationException("Payload could not be validated."))->setPayload($payload);
+            return false;
+        }
+
         $this->payload = $payload;
 
         return bool_catch(function () {
@@ -29,6 +36,11 @@ abstract class Action
     protected function payload()
     {
         return $this->payload;
+    }
+
+    protected function validatePayload($payload): bool
+    {
+        return true;
     }
 
     public function result()
