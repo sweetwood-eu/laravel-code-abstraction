@@ -1,6 +1,6 @@
 {
   "name": "sweetwood-eu/laravel-code-abstraction",
-  "description": "A package boilerplate for Laravel",
+  "description": "A package for code abstractions in Laravel",
   "type": "library",
   "authors": [
     {
@@ -11,7 +11,7 @@
 
 
   "require": {
-    "laravel/framework": "^5.8"
+    "laravel/framework": "^5.8|^6.0"
   },
 
   "require-dev": {
